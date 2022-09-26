@@ -1,21 +1,16 @@
-import "@fontsource/azeret-mono";
-import { ChakraProvider, Text } from "@chakra-ui/react";
-import { theme } from "./lib/theme";
-import Fonts from "./Fonts/Fonts";
+import { Box } from "@chakra-ui/react";
+import Layout from "./components/Layout/Layout";
 
 function App() {
   return (
-    <ChakraProvider theme={theme}>
-      <Fonts />
-      <Text
-        fontWeight="800"
-        fontFamily="body"
-        fontSize="80px"
-        bgColor="primary"
-      >
-        Experience
-      </Text>
-    </ChakraProvider>
+    <Layout>
+      <Box height="100vh" bgColor="primary">
+        esto seria section
+      </Box>
+      <Box height="100vh" bgColor="gray.200">
+        esto seria section
+      </Box>
+    </Layout>
   );
 }
 
