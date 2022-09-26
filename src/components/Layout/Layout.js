@@ -1,12 +1,20 @@
 import React from "react";
-import { Box, Icon, Link, ListItem, UnorderedList } from "@chakra-ui/react";
+import {
+  Box,
+  Icon,
+  Link,
+  ListItem,
+  Stack,
+  Text,
+  UnorderedList,
+} from "@chakra-ui/react";
 import { FaGithub, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import Footer from "../Footer/Footer";
 import NavBar from "../Navbar/NavBar";
 
 const Layout = ({ children }) => {
   return (
-    <Box display="flex" flexDirection="column" height="100vh">
+    <Box display="flex" flexDirection="column" style={{ minHeight: "100vh" }}>
       <NavBar></NavBar>
       <Box
         width="40px"
@@ -26,26 +34,26 @@ const Layout = ({ children }) => {
         >
           <ListItem>
             <Link>
-              <Icon color="secondary" as={FaGithub} />
+              <Icon color="slate100" as={FaGithub} />
             </Link>
           </ListItem>
           <ListItem>
             <Link>
-              <Icon color="secondary" as={FaTwitter} />
+              <Icon color="slate100" as={FaTwitter} />
             </Link>
           </ListItem>
           <ListItem>
             <Link>
-              <Icon color="secondary" as={FaInstagram} />
+              <Icon color="slate100" as={FaInstagram} />
             </Link>
           </ListItem>
           <ListItem>
             <Link>
-              <Icon color="secondary" as={FaLinkedinIn} />
+              <Icon color="slate100" as={FaLinkedinIn} />
             </Link>
           </ListItem>
         </UnorderedList>
-        <Box height="120px" borderRight="1px" borderColor="secondary"></Box>
+        <Box height="120px" borderRight="1px" borderColor="slate100"></Box>
       </Box>
       <Box
         width="40px"
@@ -60,7 +68,7 @@ const Layout = ({ children }) => {
         <Link
           sx={{ writingMode: "vertical-lr" }}
           letterSpacing="0.2em"
-          color="secondary"
+          color="slate100"
           fontSize="xs"
           textDecoration="none"
           fontFamily="heading"
@@ -68,10 +76,31 @@ const Layout = ({ children }) => {
           javier.rostagno@gmail.com
         </Link>
 
-        <Box height="120px" borderRight="1px" borderColor="secondary"></Box>
+        <Box height="120px" borderRight="1px" borderColor="slate100"></Box>
       </Box>
-      <Box as="main">{children}</Box>
-      <Footer></Footer>
+      <Box
+        as="main"
+        paddingX="150px"
+        style={{ margin: "auto" }}
+        width="100%"
+        maxWidth="1500px"
+      >
+        {children}
+      </Box>
+      <Box
+        as="footer"
+        flexGrow="1"
+        bgColor="gray.900"
+        textAlign="center"
+        letterSpacing="0.31em"
+        color="gray.200"
+        fontSize="16px"
+        textDecoration="none"
+        fontFamily="heading"
+        padding={6}
+      >
+        <Text>Javier Rostagno</Text>&copy;{new Date().getFullYear()}
+      </Box>
     </Box>
   );
 };

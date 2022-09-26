@@ -8,10 +8,10 @@ const NavBar = () => {
       paddingLeft={20}
       paddingRight={20}
       paddingY={10}
-      bgColor="primary"
+      bgColor="navy"
       display="flex"
       fontFamily="heading"
-      color="secondary"
+      color="slate100"
       fontSize="sm"
       alignItems="center"
       justifyContent="end"
@@ -38,11 +38,11 @@ const NavBar = () => {
       </OrderedList>
       <Button
         variant="outline"
-        bgColor="primary"
+        bgColor="navy"
         border="1px solid"
         fontSize="sm"
-        color="terciary"
-        borderColor="terciary"
+        color="teal200"
+        borderColor="teal200"
         fontFamily="body"
       >
         Resume

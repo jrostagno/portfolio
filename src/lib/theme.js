@@ -15,11 +15,11 @@ export const theme = extendTheme({
   },
 
   colors: {
-    primary: "#0A192F",
-    secondary: "#f1f5f9", //slate 100
-    terciary: "#81E6D9", // Teal 200
-    slate200Terciary: "#e2e8f0", //slate 200
-    slate300Cuaternary: "#cbd5e1", //stalte 300
+    navy: "#0A192F",
+    slate100: "#f1f5f9", //slate 100
+    teal200: "#81E6D9", // Teal 200
+    slate200: "#e2e8f0", //slate 200
+    slate300: "#cbd5e1", //stalte 300
   },
   // fontSizes: {
   //   sm: "0.9375rem",

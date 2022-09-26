@@ -5,10 +5,8 @@ const Footer = () => {
   return (
     <Box
       as="footer"
-      bgColor="primary"
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
+      bgColor="gray.900"
+      textAlign="center"
       letterSpacing="0.31em"
       color="gray.200"
       fontSize="18px"
