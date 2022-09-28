@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Icon,
-  Link,
-  ListItem,
-  Stack,
-  Text,
-  UnorderedList,
-} from "@chakra-ui/react";
+import { Box, Icon, Link, ListItem, UnorderedList } from "@chakra-ui/react";
 import { FaGithub, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import Footer from "../Footer/Footer";
 import NavBar from "../Navbar/NavBar";
@@ -86,20 +78,6 @@ const Layout = ({ children }) => {
         maxWidth="1500px"
       >
         {children}
-      </Box>
-      <Box
-        as="footer"
-        flexGrow="1"
-        bgColor="gray.900"
-        textAlign="center"
-        letterSpacing="0.31em"
-        color="gray.200"
-        fontSize="16px"
-        textDecoration="none"
-        fontFamily="heading"
-        padding={6}
-      >
-        <Text>Javier Rostagno</Text>&copy;{new Date().getFullYear()}
       </Box>
     </Box>
   );

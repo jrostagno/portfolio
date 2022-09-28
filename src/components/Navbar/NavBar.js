@@ -24,13 +24,15 @@ const NavBar = () => {
         justifyContent="space-between"
       >
         <ListItem>
-          <Link className="item">About</Link>
+          <Link href="#about" className="item">
+            About
+          </Link>
         </ListItem>
         <ListItem>
           <Link>Experience</Link>
         </ListItem>
         <ListItem>
-          <Link>Work</Link>
+          <Link href="#work">Work</Link>
         </ListItem>
         <ListItem>
           <Link>Contact</Link>

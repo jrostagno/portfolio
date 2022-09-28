@@ -40,7 +40,7 @@ const Hero = () => {
           letterSpacing="normal"
           fontFamily="body"
         >
-          I bouild things for the web.
+          I build things for the web.
         </Text>
       </Stack>
       <Text

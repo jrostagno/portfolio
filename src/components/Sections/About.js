@@ -16,14 +16,14 @@ import avatar from "../../assets/fotogithub.JPG";
 
 const About = () => {
   return (
-    <Box height="100vh" marginTop={20}>
+    <Box id="about" height="100vh" marginTop={20}>
       <Flex alignItems="center" gap="6">
         <Heading color="slate100" fontWeight="600">
           <Highlight
-            query="02."
+            query="01."
             styles={{ px: "2", py: "1", rounded: "full", bg: "teal.200" }}
           >
-            02. About me
+            01. About me
           </Highlight>
         </Heading>
         <Divider width="400px" borderColor={"teal.200"} />
@@ -40,7 +40,7 @@ const About = () => {
             fontFamily="body"
             lineHeight="short"
           >
-            Hello there! I am a curious chemical engineer who starts studying
+            Hello there! I am a curious Chemical Engineer who starts studying
             programming during quarantine time and now fascinates me.
             <br /> The technology industry has always caught my attention,its
             flexible ways of working, the bunch of opportunities they have, and
