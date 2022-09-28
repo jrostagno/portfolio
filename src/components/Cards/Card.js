@@ -15,7 +15,7 @@ const Card = ({ img, title, subtitle, stack, description }) => {
   return (
     <>
       <Accordion borderColor="navy" allowToggle>
-        <AccordionItem>
+        <AccordionItem isExpanded="true">
           <AccordionButton>
             <Box
               // _groupHover={{
@@ -36,6 +36,7 @@ const Card = ({ img, title, subtitle, stack, description }) => {
               <Stack
                 _groupHover={{
                   visibility: "visible",
+                  transition: "600ms",
                   bgColor: "navy",
                   filter: "none",
                 }}

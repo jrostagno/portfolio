@@ -29,13 +29,13 @@ const NavBar = () => {
           </Link>
         </ListItem>
         <ListItem>
-          <Link>Experience</Link>
+          <Link href="#experience">Experience</Link>
         </ListItem>
         <ListItem>
           <Link href="#work">Work</Link>
         </ListItem>
         <ListItem>
-          <Link>Contact</Link>
+          <Link href="#contact">Contact</Link>
         </ListItem>
       </OrderedList>
       <Button

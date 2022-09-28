@@ -19,7 +19,7 @@ import { FaCaretRight } from "react-icons/fa";
 const Experience = () => {
   const [isSelected, setIsSelected] = useState(20);
   return (
-    <Box id="work" height="100vh" marginTop={20} marginBottom={20}>
+    <Box id="experience" height="100vh" marginTop={20} marginBottom={20}>
       <Flex alignItems="center" gap="6">
         <Heading color="slate100" fontWeight="600">
           <Highlight
