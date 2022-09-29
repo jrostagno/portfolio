@@ -9,8 +9,8 @@ import {
   Highlight,
 } from "@chakra-ui/react";
 
-import Card from "../Cards/Card";
-import { projects } from "../../lib/constants";
+import Card from "../../Cards/Card";
+import { projects } from "../../../lib/constants";
 
 const Work = () => {
   return (

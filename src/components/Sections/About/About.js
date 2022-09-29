@@ -1,18 +1,20 @@
 import React from "react";
-import { SmallAddIcon } from "@chakra-ui/icons";
+
 import {
   Box,
   Divider,
   Flex,
+  Grid,
+  GridItem,
   Heading,
   Highlight,
   Image,
-  List,
-  ListIcon,
-  ListItem,
   Text,
 } from "@chakra-ui/react";
-import avatar from "../../assets/fotogithub.JPG";
+import avatar from "../../../assets/fotogithub.JPG";
+import { stylesParagraphAbout } from "./sylesAbout";
+
+import { technologyList } from "../../../lib/constants";
 
 const About = () => {
   return (
@@ -30,16 +32,7 @@ const About = () => {
       </Flex>
       <Box display="flex" paddingY="10" justifyContent="space-between">
         <Box maxW="2xl">
-          <Text
-            as="p"
-            color="slate300"
-            fontSize="lg"
-            fontWeight="300"
-            letterSpacing="normal"
-            paddingBottom={5}
-            fontFamily="body"
-            lineHeight="short"
-          >
+          <Text sx={stylesParagraphAbout}>
             Hello there! I am a curious Chemical Engineer who starts studying
             programming during quarantine time and now fascinates me.
             <br /> The technology industry has always caught my attention,its
@@ -48,16 +41,7 @@ const About = () => {
             learning application development, which I found, I enjoy quite a
             bit.
           </Text>
-          <Text
-            as="p"
-            color="slate300"
-            fontSize="lg"
-            paddingBottom={5}
-            fontWeight="300"
-            letterSpacing="normal"
-            fontFamily="body"
-            lineHeight="short"
-          >
+          <Text sx={stylesParagraphAbout}>
             In order to have a more comprehensive training, I carried out a Full
             Stack Developer Bootcamp of more than 800 hours of code, in which I
             carried out several projects. <br />
@@ -66,31 +50,14 @@ const About = () => {
             a company that had just started from scratch and they had to prepare
             the MVP.
           </Text>
-          <Text
-            as="p"
-            color="slate300"
-            fontSize="lg"
-            fontWeight="300"
-            paddingBottom={5}
-            letterSpacing="normal"
-            fontFamily="body"
-            lineHeight="short"
-          >
+          <Text sx={stylesParagraphAbout}>
             I am currently making applications on my own to continue practicing.
             I have a marked preference towards the Frontend, I like UI
             development and improving user experience, and I would like to
             continue delving into this area and learn technologies (React
             Native, Flutter) to be able to develop for mobile devices.
           </Text>
-          <Text
-            as="p"
-            color="slate300"
-            fontSize="lg"
-            fontWeight="300"
-            letterSpacing="normal"
-            fontFamily="body"
-            lineHeight="short"
-          >
+          <Text sx={stylesParagraphAbout}>
             These are the technologies with which I have been working:
           </Text>
         </Box>
@@ -111,48 +78,26 @@ const About = () => {
           />
         </Box>
       </Box>
-      <Flex gap="40">
-        <Box>
-          <List color="teal200" spacing={3}>
-            <ListItem>
-              <ListIcon as={SmallAddIcon} color="teal200" />
-              JavaSript
-            </ListItem>
-            <ListItem>
-              <ListIcon as={SmallAddIcon} color="teal200" />
-              TypeScript
-            </ListItem>
-            <ListItem>
-              <ListIcon as={SmallAddIcon} color="teal200" />
-              React
-            </ListItem>
-            <ListItem>
-              <ListIcon as={SmallAddIcon} color="teal200" />
-              Next
-            </ListItem>
-          </List>
-        </Box>
-        <Box>
-          <List color="teal200" spacing={3}>
-            <ListItem>
-              <ListIcon as={SmallAddIcon} color="teal200" />
-              Redux
-            </ListItem>
-            <ListItem>
-              <ListIcon as={SmallAddIcon} color="teal200" />
-              Node
-            </ListItem>
-            <ListItem>
-              <ListIcon as={SmallAddIcon} color="teal200" />
-              Express
-            </ListItem>
-            <ListItem>
-              <ListIcon as={SmallAddIcon} color="teal200" />
-              MongoDB
-            </ListItem>
-          </List>
-        </Box>
-      </Flex>
+      <Grid templateColumns="repeat(3, 300px)" gap="5">
+        {technologyList.map((tech) => (
+          <GridItem key={tech.tech}>
+            <Flex color="teal.400" alignItems="center" gap={2}>
+              <Box
+                fontSize="xl"
+                _hover={{
+                  transform: "scale(1.2)",
+                  transition: "300ms",
+                }}
+              >
+                {tech.icon}
+              </Box>
+              <Text as="h3" color="slate300" fontFamily="heading" fontSize="xs">
+                {tech.tech}
+              </Text>
+            </Flex>
+          </GridItem>
+        ))}
+      </Grid>
     </Box>
   );
 };

@@ -1,5 +1,6 @@
 import { Stack, Text } from "@chakra-ui/react";
 import React from "react";
+import { styleTitle } from "./stylesHero";
 
 const Hero = () => {
   return (
@@ -21,25 +22,10 @@ const Hero = () => {
         Hello there, I am ...
       </Text>
       <Stack spacing="-3">
-        <Text
-          marginTop="0px"
-          as="h2"
-          color="slate300"
-          fontSize="6xl"
-          fontWeight="700"
-          letterSpacing="normal"
-          fontFamily="body"
-        >
+        <Text sx={styleTitle} as="h2">
           Javier Rostagno.
         </Text>
-        <Text
-          as="h2"
-          color="slate300"
-          fontSize="6xl"
-          fontWeight="700"
-          letterSpacing="normal"
-          fontFamily="body"
-        >
+        <Text as="h2" sx={styleTitle}>
           I build things for the web.
         </Text>
       </Stack>

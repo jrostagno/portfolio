@@ -1,8 +1,8 @@
 import React from "react";
-import { Box, Icon, Link, ListItem, UnorderedList } from "@chakra-ui/react";
-import { FaGithub, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import Footer from "../Footer/Footer";
+import { Box, Link, ListItem, UnorderedList } from "@chakra-ui/react";
+
 import NavBar from "../Navbar/NavBar";
+import { contactLinks } from "../../lib/constants";
 
 const Layout = ({ children }) => {
   return (
@@ -22,28 +22,31 @@ const Layout = ({ children }) => {
           margin="auto"
           listStyleType="none"
           fontSize="xl"
-          spacing={10}
+          spacing={12}
+          marginBottom="20px"
         >
-          <ListItem>
-            <Link>
-              <Icon color="slate100" as={FaGithub} />
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link>
-              <Icon color="slate100" as={FaTwitter} />
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link>
-              <Icon color="slate100" as={FaInstagram} />
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link>
-              <Icon color="slate100" as={FaLinkedinIn} />
-            </Link>
-          </ListItem>
+          {contactLinks.map((link) => (
+            <ListItem
+              _hover={{
+                color: "teal.200",
+                transform: "translateY(-30%)",
+                transitionDelay: "400ms",
+                transition: "300ms",
+              }}
+              key={link.href}
+            >
+              <Link
+                target="_blank"
+                _hover={{
+                  color: "teal.200",
+                }}
+                href={link.href}
+                color="slate100"
+              >
+                {link.icon}
+              </Link>
+            </ListItem>
+          ))}
         </UnorderedList>
         <Box height="120px" borderRight="1px" borderColor="slate100"></Box>
       </Box>
@@ -59,8 +62,16 @@ const Layout = ({ children }) => {
       >
         <Link
           sx={{ writingMode: "vertical-lr" }}
+          href="mailto:javier.rostagno@gmail.com"
           letterSpacing="0.2em"
           color="slate100"
+          _hover={{
+            textDecoration: "none",
+            color: "teal.200",
+            transform: "translateY(-10%)",
+            transitionDelay: "400ms",
+            transition: "800ms",
+          }}
           fontSize="xs"
           textDecoration="none"
           fontFamily="heading"

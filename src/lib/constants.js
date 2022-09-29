@@ -3,6 +3,24 @@ import weather from "../assets/weatherapp.png";
 import foodarity from "../assets/food2.png";
 import invoiceapp from "../assets/invoiceapp.png";
 
+import {
+  FaGithub,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedinIn,
+  FaWhatsapp,
+} from "react-icons/fa";
+
+import { IoLogoJavascript } from "react-icons/io5";
+import {
+  SiTypescript,
+  SiNextdotjs,
+  SiRedux,
+  SiExpress,
+  SiMongodb,
+} from "react-icons/si";
+import { FaReact, FaNode } from "react-icons/fa";
+
 export const projects = [
   {
     img: invoiceapp,
@@ -39,4 +57,29 @@ export const projects = [
     description:
       "This app was created with react using the Tailwindcss library to give styles. The idea was to create a weather app (consuming weater API) with a simple and minimalist UI.",
   },
+];
+
+export const contactLinks = [
+  { href: "https://wa.me/+5491132615516", icon: <FaWhatsapp /> },
+  { href: "https://github.com/jrostagno", icon: <FaGithub /> },
+  { href: "https://twitter.com/RostagnoJavier", icon: <FaTwitter /> },
+  {
+    href: "https://www.instagram.com/javier.rostagno/",
+    icon: <FaInstagram />,
+  },
+  {
+    href: "https://www.linkedin.com/in/javier-rostagno/",
+    icon: <FaLinkedinIn />,
+  },
+];
+
+export const technologyList = [
+  { tech: "JavaScript", icon: <IoLogoJavascript /> },
+  { tech: "TypeScript", icon: <SiTypescript /> },
+  { tech: "React", icon: <FaReact /> },
+  { tech: "Next", icon: <SiNextdotjs /> },
+  { tech: "Redux", icon: <SiRedux /> },
+  { tech: "Node", icon: <FaNode /> },
+  { tech: "Express", icon: <SiExpress /> },
+  { tech: "MongoDB", icon: <SiMongodb /> },
 ];

@@ -1,7 +1,15 @@
 import { Box, Button, Link, ListItem, OrderedList } from "@chakra-ui/react";
 import React from "react";
+import { stylesNavLinks } from "./stylesNavBar";
 
 const NavBar = () => {
+  const navLinks = [
+    { name: "About", href: "#about" },
+    { name: "Experience", href: "#experience" },
+    { name: "Work", href: "#work" },
+    { name: "Contact", href: "#contact" },
+  ];
+
   return (
     <Box
       as="nav"
@@ -23,24 +31,31 @@ const NavBar = () => {
         display="flex"
         justifyContent="space-between"
       >
-        <ListItem>
-          <Link href="#about" className="item">
-            About
-          </Link>
-        </ListItem>
-        <ListItem>
-          <Link href="#experience">Experience</Link>
-        </ListItem>
-        <ListItem>
-          <Link href="#work">Work</Link>
-        </ListItem>
-        <ListItem>
-          <Link href="#contact">Contact</Link>
-        </ListItem>
+        {navLinks.map((link) => (
+          <ListItem
+            _hover={{
+              color: "teal.200",
+              transition: "300ms",
+            }}
+            key={link.name}
+          >
+            <Link sx={stylesNavLinks} href={link.href}>
+              {link.name}
+            </Link>
+          </ListItem>
+        ))}
       </OrderedList>
       <Button
+        as="a"
+        target="_blank"
+        href="https://drive.google.com/file/d/1K5w2q0Z_WrF_0pV2cwxCJY7Qp74ZbQAa/view"
         variant="outline"
-        bgColor="navy"
+        _hover={{
+          bgColor: "navy",
+          color: "teal.100",
+          borderColor: "teal.100",
+          transform: "scale(1.10)",
+        }}
         border="1px solid"
         fontSize="sm"
         color="teal200"
