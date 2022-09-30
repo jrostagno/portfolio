@@ -1,43 +1,43 @@
 import { Stack, Text } from "@chakra-ui/react";
 import React from "react";
-import { styleTitle } from "./stylesHero";
+import { styleTitle, styleTitle2 } from "./stylesHero";
 
 const Hero = () => {
   return (
     <Stack
-      paddingY="10"
+      paddingY={20}
       as="section"
-      spacing={8}
+      spacing={10}
       height="100vh"
       bgColor="primary"
     >
       <Text
         as="h1"
         color="teal200"
-        fontSize="md"
+        fontSize="2xl"
         fontWeight="500"
         letterSpacing="wider"
         fontFamily="heading"
       >
         Hello there, I am ...
       </Text>
-      <Stack spacing="-3">
+      <Stack>
         <Text sx={styleTitle} as="h2">
           Javier Rostagno.
         </Text>
-        <Text as="h2" sx={styleTitle}>
-          I build things for the web.
+        <Text sx={styleTitle2} as="h2">
+          Web developer
         </Text>
       </Stack>
       <Text
-        maxW="600px"
+        maxW="900px"
         as="p"
         color="slate300"
-        fontSize="lg"
+        fontSize="2xl"
         fontWeight="400"
-        letterSpacing="normal"
+        letterSpacing="wider"
         fontFamily="body"
-        lineHeight="7"
+        lineHeight="8"
       >
         I am a Full stack developer with a preference for Frontend, I like
         creating nice UI. I develop my app With React and love using libraries

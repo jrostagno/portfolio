@@ -21,27 +21,4 @@ export const theme = extendTheme({
     slate200: "#e2e8f0", //slate 200
     slate300: "#cbd5e1", //stalte 300
   },
-  // fontSizes: {
-  //   sm: "0.9375rem",
-  //   xs: "0.8125rem",
-  //   lg: "1.25rem",
-  //   xl: "2rem",
-  //   xlg: "2.5rem",
-  //   xxl: "6.875rem",
-  // },
-  // letterSpacings: {
-  //   wider: "0.04em",
-  //   wide: "0.03em",
-  //   tight: "-0.02em",
-  //   tighter: "-0,04em",
-  // },
-  // lineHeights: {
-  //   6: "3.5rem",
-  //   7: "4.25rem",
-  //   9: "6.125rem",
-  //   10: "6.87rem",
-  // },
-  // borderRadius: {
-  //   base: "16px",
-  // },
 });

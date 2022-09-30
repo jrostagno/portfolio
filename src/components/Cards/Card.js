@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Accordion,
   AccordionButton,
@@ -15,36 +15,35 @@ const Card = ({ img, title, subtitle, stack, description }) => {
   return (
     <>
       <Accordion borderColor="navy" allowToggle>
-        <AccordionItem isExpanded="true">
+        <AccordionItem>
           <AccordionButton>
             <Box
-              // _groupHover={{
-              //   transform: "scale(1.15)",
-              // }}
-              bgImage={{ base: `url(${img})` }}
-              filter="grayscale(0%)"
+              bgImage={{
+                base: `url(${img})`,
+              }}
               padding={0}
               width="full"
+              backdropBlur="8px"
+              backdropFilter="auto"
               height="full"
-              boxShadow="dark-lg"
+              boxShadow="2px 6px 10px #319795"
               bgRepeat="no-repeat"
               rounded="2xl"
               bgColor="navy"
               bgPosition="center center"
-              bgSize={{ base: "90% auto" }}
+              bgSize={{ base: "80% auto" }}
             >
               <Stack
                 _groupHover={{
                   visibility: "visible",
-                  transition: "600ms",
+                  transition: "1000ms",
+                  transitionDelay: "250ms",
                   bgColor: "navy",
                   filter: "none",
                 }}
                 visibility="hidden"
                 rounded="2xl"
                 backdropFilter="auto"
-                // backdropContrast="100%"
-                backdropBlur="30px"
                 spacing={2}
               >
                 <Box

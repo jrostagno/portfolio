@@ -1,9 +1,10 @@
 export const stylesButtonExperience = {
   rounded: "none",
   borderLeft: "1px solid #4A5568",
-  paddingY: "40px",
+  paddingY: "30px",
   color: "#e2e8f0",
-  paddingX: "40px",
+  paddingX: "30px",
+  fontSize: "xs",
   backgroundColor: "navy",
   colorScheme: "navy",
   _hover: {

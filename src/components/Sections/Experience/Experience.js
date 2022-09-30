@@ -1,16 +1,9 @@
 import React, { useState } from "react";
-import {
-  Box,
-  Button,
-  Divider,
-  Flex,
-  Heading,
-  Highlight,
-  Stack,
-} from "@chakra-ui/react";
+import { Box, Button, Flex, Stack } from "@chakra-ui/react";
 
 import { stylesButtonExperience } from "./stylesExperience";
 import ExperienceDescription from "./ExperienceDescription";
+import SectionDivider from "../../Divider/SectioDivider";
 
 const Experience = () => {
   const [isSelected, setIsSelected] = useState(20);
@@ -23,18 +16,8 @@ const Experience = () => {
   ];
 
   return (
-    <Box id="experience" height="100vh" marginTop={20} marginBottom={20}>
-      <Flex alignItems="center" gap="6">
-        <Heading color="slate100" fontWeight="600">
-          <Highlight
-            query="02."
-            styles={{ px: "2", py: "1", rounded: "full", bg: "teal.200" }}
-          >
-            02. Dev Experience & more..
-          </Highlight>
-        </Heading>
-        <Divider width="300px" borderColor={"teal.200"} />
-      </Flex>
+    <Box id="experience" marginTop={20} paddingY={40} marginBottom={20}>
+      <SectionDivider query="02." section="02. Dev Experience & more.." />
       <Box marginTop={20} marginX="auto" maxW="800px">
         <Flex>
           <Stack spacing={0} borderLeft="1px solid" borderColor="gray.600">

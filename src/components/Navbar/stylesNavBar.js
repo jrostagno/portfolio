@@ -5,4 +5,5 @@ export const stylesNavLinks = {
     textDecoration: "none",
   },
   textDecoration: "none",
+  fontSize: "lg",
 };

@@ -9,10 +9,10 @@ const Footer = () => {
       textAlign="center"
       letterSpacing="0.31em"
       color="gray.200"
-      fontSize="18px"
+      fontSize="md"
       textDecoration="none"
       fontFamily="heading"
-      padding={10}
+      padding={5}
     >
       <Text>Javier Rostagno</Text>&copy;{new Date().getFullYear()}
     </Box>

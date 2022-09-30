@@ -1,36 +1,22 @@
 import React from "react";
 
-import {
-  Box,
-  Divider,
-  Flex,
-  Grid,
-  GridItem,
-  Heading,
-  Highlight,
-  Image,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Flex, Grid, GridItem, Image, Text } from "@chakra-ui/react";
 import avatar from "../../../assets/fotogithub.JPG";
 import { stylesParagraphAbout } from "./sylesAbout";
 
 import { technologyList } from "../../../lib/constants";
+import SectionDivider from "../../Divider/SectioDivider";
 
 const About = () => {
   return (
-    <Box id="about" height="100vh" marginTop={20}>
-      <Flex alignItems="center" gap="6">
-        <Heading color="slate100" fontWeight="600">
-          <Highlight
-            query="01."
-            styles={{ px: "2", py: "1", rounded: "full", bg: "teal.200" }}
-          >
-            01. About me
-          </Highlight>
-        </Heading>
-        <Divider width="400px" borderColor={"teal.200"} />
-      </Flex>
-      <Box display="flex" paddingY="10" justifyContent="space-between">
+    <Box id="about" border="1px solid white" paddingTop={40}>
+      <SectionDivider query="01." section="01. About me" />
+      <Box
+        display="grid"
+        gridTemplateColumns="3fr 2fr"
+        paddingY={10}
+        gap="50px"
+      >
         <Box maxW="2xl">
           <Text sx={stylesParagraphAbout}>
             Hello there! I am a curious Chemical Engineer who starts studying
@@ -65,20 +51,20 @@ const About = () => {
           overflow="hidden"
           filter="grayscale(80%)"
           borderRadius="2xl"
-          minW="250px"
-          maxW="250px"
+          minW="300px"
+          maxW="300px"
         >
           <Image
             src={avatar}
             widht="full"
             objectFit="none"
-            height="250px"
+            height="300px"
             borderRadius="2xl"
             alt="avatar"
           />
         </Box>
       </Box>
-      <Grid templateColumns="repeat(3, 300px)" gap="5">
+      <Grid templateColumns="repeat(3, 300px)" justifyContent="center" gap="5">
         {technologyList.map((tech) => (
           <GridItem key={tech.tech}>
             <Flex color="teal.400" alignItems="center" gap={2}>

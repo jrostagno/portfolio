@@ -10,7 +10,7 @@ import Contact from "./components/Sections/Contacts/Contact";
 function App() {
   return (
     <Layout>
-      <Container maxWidth="1050px">
+      <Container maxWidth="1450px">
         <Hero />
         <About />
         <Experience />

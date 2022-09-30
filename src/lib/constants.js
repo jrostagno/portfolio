@@ -2,6 +2,10 @@ import nomades from "../assets/nomades.png";
 import weather from "../assets/weatherapp.png";
 import foodarity from "../assets/food2.png";
 import invoiceapp from "../assets/invoiceapp.png";
+import pokemon from "../assets/poke.png";
+import cibertics from "../assets/cibertics.png";
+import poker from "../assets/poker.png";
+import porfolio from "../assets/porfolio.png";
 
 import {
   FaGithub,
@@ -56,6 +60,38 @@ export const projects = [
     stack: "React JavaScript Tailwindscss",
     description:
       "This app was created with react using the Tailwindcss library to give styles. The idea was to create a weather app (consuming weater API) with a simple and minimalist UI.",
+  },
+  {
+    img: pokemon,
+    title: "PokeDex",
+    subtitle: "This is the First App I made,, end-to-end,SPA using Poke API",
+    stack: "React JavaScript CSS PostgreSQL Express",
+    description:
+      "PI Henry Pokemon , end-to-end , SPA, front created with React, Css-Module, Back created with Express, Sequelize and PostgreSQL for Data Base.",
+  },
+  {
+    img: cibertics,
+    title: "Dashboars",
+    subtitle: "UI replication Cibertics table, created with Tailwindscss",
+    stack: "React javaScript Tailwindscss",
+    description:
+      "This challenge consist in the replications of a UI that contains a table with cumulative filters. and paginations.",
+  },
+  {
+    img: poker,
+    title: "Deck of cards",
+    subtitle: "Game, Deck of cards, find all queens",
+    stack: "React javaScript Tailwindscss",
+    description:
+      "This app was created as part of a challenge, The task is to write a program that draws cards from a deck. This program needs to keep drawing cards from the deck until it has drawn a QUEEN of every suit",
+  },
+  {
+    img: porfolio,
+    title: "My website",
+    subtitle: "Personal portfolio",
+    stack: "React javaScript Chakra UI",
+    description:
+      "This app was created as part of a challenge, The task is to write a program that draws cards from a deck. This program needs to keep drawing cards from the deck until it has drawn a QUEEN of every suit",
   },
 ];
 
