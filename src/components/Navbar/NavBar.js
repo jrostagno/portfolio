@@ -1,7 +1,8 @@
-import { Box, Button, Link, ListItem, OrderedList } from "@chakra-ui/react";
+import { Box, Button, ListItem, OrderedList } from "@chakra-ui/react";
 import React, { useEffect, useRef, useState } from "react";
 import { stylesNavLinks } from "./stylesNavBar";
 import styles from "./NavBar.module.css";
+import { Link } from "react-scroll";
 
 const NavBar = ({ ...props }) => {
   const myRef = useRef();
@@ -37,10 +38,10 @@ const NavBar = ({ ...props }) => {
     }
   };
   const navLinks = [
-    { name: "About", href: "#about" },
-    { name: "Experience", href: "#experience" },
-    { name: "Work", href: "#work" },
-    { name: "Contact", href: "#contact" },
+    { name: "About", href: "about" },
+    { name: "Experience", href: "experience" },
+    { name: "Work", href: "work" },
+    { name: "Contact", href: "contact" },
   ];
 
   return (
@@ -51,15 +52,17 @@ const NavBar = ({ ...props }) => {
       as="nav"
       paddingLeft={20}
       paddingRight={20}
-      paddingY={10}
-      bgColor={`${navIsOnTop ? "blackAlpha.300" : "navy"}`}
+      paddingY={5}
+      // bgColor={`${navIsOnTop ? "blackAlpha.300" : "navy"}`}
       display="flex"
       fontFamily="heading"
       color="slate100"
       fontSize="sm"
       alignItems="center"
+      bgGradient="linear(to-t,navy,blackAlpha.300)"
       position="fixed"
-      top={`${isScrollDown ? "0" : "-100"}`}
+      visibility={`${isScrollDown ? "visible" : "hidden"}`}
+      // top={`${isScrollDown ? "0" : "-100"}`}
       width="100%"
       justifyContent="end"
       gap="4"
@@ -74,14 +77,20 @@ const NavBar = ({ ...props }) => {
       >
         {navLinks.map((link) => (
           <ListItem
-            fontSize="lg"
+            fontSize="sm"
             _hover={{
               color: "teal.200",
               transition: "300ms",
             }}
             key={link.name}
           >
-            <Link sx={stylesNavLinks} href={link.href}>
+            <Link
+              smooth={true}
+              offset={50}
+              duration={500}
+              sx={stylesNavLinks}
+              to={link.href}
+            >
               {link.name}
             </Link>
           </ListItem>
@@ -99,8 +108,8 @@ const NavBar = ({ ...props }) => {
           transform: "scale(1.10)",
         }}
         border="1px solid"
-        padding="25px 40px"
-        fontSize="lg"
+        padding="20px 30px"
+        fontSize="sm"
         color="teal200"
         borderColor="teal200"
         fontFamily="body"

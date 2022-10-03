@@ -14,7 +14,7 @@ const Hero = () => {
       <Text
         as="h1"
         color="teal200"
-        fontSize="2xl"
+        fontSize="md"
         fontWeight="500"
         letterSpacing="wider"
         fontFamily="heading"
@@ -25,7 +25,15 @@ const Hero = () => {
         <Text sx={styleTitle} as="h2">
           Javier Rostagno.
         </Text>
-        <Text sx={styleTitle2} as="h2">
+        <Text
+          bgGradient="linear(to-t, #76E4F7, #9F7AEA)"
+          bgClip="text"
+          fontSize="5rem"
+          fontFamily="body"
+          sx={styleTitle2}
+          fontWeight="700"
+          as="h2"
+        >
           Web developer
         </Text>
       </Stack>
@@ -33,11 +41,12 @@ const Hero = () => {
         maxW="900px"
         as="p"
         color="slate300"
-        fontSize="2xl"
+        fontSize="1.25rem"
         fontWeight="400"
         letterSpacing="wider"
         fontFamily="body"
         lineHeight="8"
+        opacity="0.6"
       >
         I am a Full stack developer with a preference for Frontend, I like
         creating nice UI. I develop my app With React and love using libraries

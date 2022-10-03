@@ -1,20 +1,13 @@
 import React from "react";
-import {
-  Box,
-  Button,
-  Divider,
-  Flex,
-  Heading,
-  Highlight,
-  Link,
-  Text,
-} from "@chakra-ui/react";
+import AOS from "aos";
+import { Box, Button, Flex, Link, Text } from "@chakra-ui/react";
 
 import { styleContactButton, styleLinks } from "./stylesContact";
 import { contactLinks } from "../../../lib/constants";
 import SectionDivider from "../../Divider/SectioDivider";
 
 const Contact = () => {
+  AOS.init();
   return (
     <Box
       id="contact"
@@ -25,10 +18,19 @@ const Contact = () => {
       flexDirection="column"
     >
       <SectionDivider query="04." section="04. Get in touch" />
-      <Box display="flex" flexDirection="column" gap={20} padding={10}>
-        <Text color="slate300" fontSize="lg">
+      <Box
+        data-aos="zoom-in-up"
+        maxW="800px"
+        display="flex"
+        marginTop={20}
+        flexDirection="column"
+        gap={20}
+        padding={10}
+      >
+        <Text color="slate300" textAlign="center" opacity="0.6" fontSize="lg">
           Please get in contact with me, I am always open to listening to new
-          opportunities... Click!
+          opportunities, Send me an email I will try to answer as soon as
+          possible! click!
         </Text>
         <Box display="flex" flexDirection="column" alignItems="center" gap={10}>
           <Link href="mailto:javier.rostagno@gmail.com">

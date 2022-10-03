@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import AOS from "aos";
 import { Box, Button, Flex, Stack } from "@chakra-ui/react";
 
 import { stylesButtonExperience } from "./stylesExperience";
@@ -6,6 +7,7 @@ import ExperienceDescription from "./ExperienceDescription";
 import SectionDivider from "../../Divider/SectioDivider";
 
 const Experience = () => {
+  AOS.init();
   const [isSelected, setIsSelected] = useState(20);
 
   const experience = [
@@ -16,9 +18,16 @@ const Experience = () => {
   ];
 
   return (
-    <Box id="experience" marginTop={20} paddingY={40} marginBottom={20}>
+    <Box id="experience" marginTop={20} paddingY={40} marginBottom={0}>
       <SectionDivider query="02." section="02. Dev Experience & more.." />
-      <Box marginTop={20} marginX="auto" maxW="800px">
+      <Box
+        data-aos="fade-up"
+        data-aos-anchor-placement="bottom-bottom"
+        data-aos-duration="1000"
+        marginTop={20}
+        marginX="auto"
+        maxW="800px"
+      >
         <Flex>
           <Stack spacing={0} borderLeft="1px solid" borderColor="gray.600">
             {experience.map((company) => (

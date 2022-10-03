@@ -6,11 +6,25 @@ import About from "./components/Sections/About/About";
 import Work from "./components/Sections/Work/Work";
 import Experience from "./components/Sections/Experience/Experience";
 import Contact from "./components/Sections/Contacts/Contact";
+import { useEffect, useState } from "react";
+import Loader from "./components/Loaders/Loader";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  window.addEventListener("load", function () {
+    setLoading(false);
+  });
+
+  // useEffect(() => {
+  //   setLoading(false);
+  // }, []);
+
+  if (loading) return <Loader />;
+
   return (
     <Layout>
-      <Container maxWidth="1450px">
+      <Container paddingX="130px" maxWidth="1250px">
         <Hero />
         <About />
         <Experience />

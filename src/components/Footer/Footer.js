@@ -5,14 +5,14 @@ const Footer = () => {
   return (
     <Box
       as="footer"
-      bgColor="gray.900"
+      bgGradient="linear(to-b, #0A192F, #1D4044)"
       textAlign="center"
       letterSpacing="0.31em"
       color="gray.200"
-      fontSize="md"
+      fontSize="sm"
       textDecoration="none"
       fontFamily="heading"
-      padding={5}
+      padding={3}
     >
       <Text>Javier Rostagno</Text>&copy;{new Date().getFullYear()}
     </Box>

@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
         as="main"
         marginX="auto"
         paddingY="150px"
-        paddingX="90px"
+        paddingX="0px"
         style={{ margin: "auto" }}
         width="100%"
         maxWidth="1500px"

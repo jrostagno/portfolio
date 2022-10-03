@@ -20,6 +20,7 @@ const ExperienceDescription = ({ description, company, date, stack }) => {
               py: "1",
               rounded: "full",
               bg: "teal.200",
+              color: "slate900",
             }}
           >
             {company}

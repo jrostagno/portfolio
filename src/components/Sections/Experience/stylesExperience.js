@@ -23,6 +23,7 @@ export const stylesDescriptionExperience = {
   fontSize: "md",
   fontWeight: "300",
   letterSpacing: "normal",
+  opacity: "0.5",
   paddingBottom: "3",
   fontFamily: "heading",
   lineHeight: "short",
