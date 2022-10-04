@@ -38,7 +38,7 @@ const About = () => {
             <span style={{ color: "#81E6D9", opacity: "1" }}>
               Chemical Engineer
             </span>{" "}
-            who started studying programming during quarantine time and now
+            who started studying programming during quarantine time and now it
             fascinates me.
             <br /> The technology industry has always caught my attention, its
             flexible ways of working, the bunch of opportunities they have, and
