@@ -18,6 +18,7 @@ const NavLinks = ({ navLinks, onClose, ...props }) => {
       >
         {navLinks.map((link) => (
           <ListItem
+            cursor="pointer"
             fontSize="sm"
             _hover={{
               color: "teal200",
