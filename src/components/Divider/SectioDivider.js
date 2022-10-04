@@ -17,7 +17,7 @@ const SectionDivider = ({ query, section }) => {
         </Highlight>
       </Heading>
       <Divider
-        display={{ base: "none", sm: "block" }}
+        display={{ base: "none", md: "block" }}
         width="250px"
         borderColor={"teal.200"}
       />
