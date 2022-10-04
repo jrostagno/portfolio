@@ -32,7 +32,7 @@ const Contact = () => {
         <Text color="slate300" textAlign="center" opacity="0.6" fontSize="lg">
           Please get in contact with me, I am always open to listening to new
           opportunities, Send me an email I will try to answer as soon as
-          possible! click!
+          possible! Click!
         </Text>
         <Box display="flex" flexDirection="column" alignItems="center" gap={10}>
           <Link href="mailto:javier.rostagno@gmail.com">
