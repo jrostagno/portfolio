@@ -9,9 +9,13 @@ import {
 const ExperienceDescription = ({ description, company, date, stack }) => {
   return (
     <Flex alignItems="center">
-      <Box padding={6}>
+      <Box padding={{ base: "0", sm: "3", md: "6" }}>
         <Flex alignItems="center" gap={2}>
-          <Icon fontSize="20px" color="teal.200" as={FaCaretRight} />
+          <Icon
+            fontSize={{ base: "0.8rem", sm: "lg" }}
+            color="teal.200"
+            as={FaCaretRight}
+          />
           <Highlight
             fontSize="md"
             query={company}
@@ -25,15 +29,27 @@ const ExperienceDescription = ({ description, company, date, stack }) => {
           >
             {company}
           </Highlight>
-          <Text fontFamily="heading" color="gray.500" fontSize="md">
+          <Text
+            fontFamily="heading"
+            color="gray.500"
+            fontSize={{ base: "xs", sm: "lg", md: "md" }}
+          >
             {date}
           </Text>
         </Flex>
 
-        <Text sx={stylesDescriptionExperience} as="p">
+        <Text
+          fontSize={{ base: "0.8rem", sm: "lg", sm: "md" }}
+          sx={stylesDescriptionExperience}
+          as="p"
+        >
           {description}
         </Text>
-        <Text sx={stylesDescriptionStack} as="p">
+        <Text
+          fontSize={{ base: "0.8rem", sm: "lg", sm: "md" }}
+          sx={stylesDescriptionStack}
+          as="p"
+        >
           {stack}
         </Text>
       </Box>

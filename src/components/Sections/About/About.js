@@ -14,28 +14,40 @@ const About = () => {
     <Box id="about" paddingTop={40}>
       <SectionDivider query="01." section="01. About me" />
       <Box
-        display="grid"
+        display={{ base: "flex", lg: "grid" }}
+        flexDirection="column-reverse"
         gridTemplateColumns="3fr 2fr"
         justifyContent="center"
+        alignItems={{ base: "center", lg: "start" }}
         paddingY={10}
-        gap="90px"
+        gap={{ base: "40px", sm: "90px" }}
       >
-        <Box textAlign="justify" data-aos="fade-up" maxW="2xl">
-          <Text sx={stylesParagraphAbout}>
+        <Box
+          textAlign={{ base: "center", md: "justify" }}
+          data-aos="fade-up"
+          maxW="2xl"
+        >
+          <Text
+            as="p"
+            paddingBottom={{ base: "1", sm: "5" }}
+            fontSize={{ base: "0.7rem", sm: "xl" }}
+            lineHeight={{ base: "inherit", sm: "short" }}
+            sx={stylesParagraphAbout}
+          >
             Hello there! I am a curious{" "}
             <span style={{ color: "#81E6D9", opacity: "1" }}>
               Chemical Engineer
             </span>{" "}
-            who starts studying programming during quarantine time and now
+            who started studying programming during quarantine time and now
             fascinates me.
-            <br /> The technology industry has always caught my attention,its
+            <br /> The technology industry has always caught my attention, its
             flexible ways of working, the bunch of opportunities they have, and
             the great capacity to impact change have sparked my interest in
             learning application development, which I found, I enjoy quite a
             bit.
           </Text>
           <Text sx={stylesParagraphAbout}>
-            In order to have a more comprehensive training, I carried out a{" "}
+            In order to have more comprehensive training, I carried out a{" "}
             <span
               style={{ color: "#81E6D9", opacity: "1", marginRight: "4px" }}
             >
@@ -74,10 +86,19 @@ const About = () => {
           />
         </Box>
       </Box>
-      <Grid templateColumns="repeat(3, 300px)" justifyContent="center" gap="5">
+      <Grid
+        templateColumns="repeat(auto-fill, minmax(150px, 1fr))"
+        justifyContent="center"
+        gap="5"
+      >
         {technologyList.map((tech) => (
           <GridItem key={tech.tech}>
-            <Flex color="teal.400" alignItems="center" gap={2}>
+            <Flex
+              color="teal.400"
+              alignItems="center"
+              justifyContent="center"
+              gap={2}
+            >
               <Box
                 fontSize="xl"
                 _hover={{

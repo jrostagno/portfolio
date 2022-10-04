@@ -11,20 +11,22 @@ const Contact = () => {
   return (
     <Box
       id="contact"
-      height="100vh"
       display="flex"
+      height="100vh"
       justifyContent="center"
       alignItems="center"
       flexDirection="column"
+      paddingTop={40}
+      paddingBottom={20}
     >
       <SectionDivider query="04." section="04. Get in touch" />
       <Box
         data-aos="zoom-in-up"
         maxW="800px"
         display="flex"
-        marginTop={20}
+        marginTop={{ base: "10", sm: "20" }}
         flexDirection="column"
-        gap={20}
+        gap={{ base: "10", sm: "20" }}
         padding={10}
       >
         <Text color="slate300" textAlign="center" opacity="0.6" fontSize="lg">

@@ -1,9 +1,7 @@
 export const stylesButtonExperience = {
   rounded: "none",
   borderLeft: "1px solid #4A5568",
-  paddingY: "30px",
   color: "#e2e8f0",
-  paddingX: "30px",
   fontSize: "xs",
   backgroundColor: "navy",
   colorScheme: "navy",
@@ -18,9 +16,8 @@ export const stylesButtonExperience = {
 };
 
 export const stylesDescriptionExperience = {
-  padding: "3",
+  padding: "1",
   color: "slate300",
-  fontSize: "md",
   fontWeight: "300",
   letterSpacing: "normal",
   opacity: "0.5",
@@ -30,9 +27,8 @@ export const stylesDescriptionExperience = {
 };
 
 export const stylesDescriptionStack = {
-  padding: "3",
+  padding: "1",
   color: "teal200",
-  fontSize: "md",
   fontWeight: "300",
   letterSpacing: "normal",
   paddingBottom: "3",

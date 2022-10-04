@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Accordion,
   AccordionButton,
@@ -51,11 +51,11 @@ const Card = ({ img, title, subtitle, stack, description, github, url }) => {
                 height="full"
                 rounded="2xl"
                 backdropFilter="auto"
-                spacing={2}
+                spacing={{ base: "0px", sm: "2" }}
                 paddingX={4}
               >
                 <Box
-                  padding="10"
+                  padding={{ base: "8", sm: "10" }}
                   display="flex"
                   gap="5"
                   justifyContent="flex-end"
@@ -96,10 +96,10 @@ const Card = ({ img, title, subtitle, stack, description, github, url }) => {
                   </Text>
                   <Text
                     textAlign="left"
-                    fontSize="lg"
+                    fontSize={{ base: "xs", sm: "lg" }}
                     fontWeight="300"
                     letterSpacing="wide"
-                    lineHeight={6}
+                    lineHeight={{ base: "4", sm: "6" }}
                     color="slate300"
                     _groupHover={{
                       visibility: "hidden",
@@ -113,7 +113,8 @@ const Card = ({ img, title, subtitle, stack, description, github, url }) => {
                 <Flex padding={5} gap={3} flexWrap="wrap" marginBottom="0px">
                   {stack.map((skill) => (
                     <Text
-                      fontSize="sm"
+                      key={skill}
+                      fontSize={{ base: "xs", sm: "sm" }}
                       fontFamily="heading"
                       fontWeight="300"
                       color="teal.200"

@@ -8,7 +8,7 @@ const MailLinks = () => {
       position="fixed"
       bottom="0"
       right="40px"
-      display="flex"
+      display={{ base: "none", md: "flex" }}
       flexDirection="column"
       alignItems="center"
       gap={3}

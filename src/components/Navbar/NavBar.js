@@ -1,10 +1,12 @@
-import { Box, Button, ListItem, OrderedList } from "@chakra-ui/react";
-import React, { useEffect, useRef, useState } from "react";
-import { stylesNavLinks } from "./stylesNavBar";
-import styles from "./NavBar.module.css";
-import { Link } from "react-scroll";
+import { Box, useDisclosure } from "@chakra-ui/react";
+import React, { useRef, useState } from "react";
+
+import NavLinks from "./NavLinks";
+import HamburgerMenue from "../Hamburger/HamburgerMenue";
 
 const NavBar = ({ ...props }) => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const btnRef = React.useRef();
   const myRef = useRef();
 
   const [isScrollDown, setIsScrollDown] = useState(true);
@@ -48,12 +50,9 @@ const NavBar = ({ ...props }) => {
     <Box
       zIndex={10}
       ref={myRef}
-      className={styles.nav}
       as="nav"
-      paddingLeft={20}
-      paddingRight={20}
+      paddingX={{ base: "10px", sm: "30px", md: "60px" }}
       paddingY={5}
-      // bgColor={`${navIsOnTop ? "blackAlpha.300" : "navy"}`}
       display="flex"
       fontFamily="heading"
       color="slate100"
@@ -62,60 +61,29 @@ const NavBar = ({ ...props }) => {
       bgGradient="linear(to-t,navy,blackAlpha.300)"
       position="fixed"
       visibility={`${isScrollDown ? "visible" : "hidden"}`}
-      // top={`${isScrollDown ? "0" : "-100"}`}
       width="100%"
       justifyContent="end"
       gap="4"
       {...props}
     >
-      <OrderedList
-        listStyleType="decimal"
-        gap={20}
-        marginRight={10}
-        display="flex"
-        justifyContent="space-between"
-      >
-        {navLinks.map((link) => (
-          <ListItem
-            fontSize="sm"
-            _hover={{
-              color: "teal.200",
-              transition: "300ms",
-            }}
-            key={link.name}
-          >
-            <Link
-              smooth={true}
-              offset={50}
-              duration={500}
-              sx={stylesNavLinks}
-              to={link.href}
-            >
-              {link.name}
-            </Link>
-          </ListItem>
-        ))}
-      </OrderedList>
-      <Button
-        as="a"
-        target="_blank"
-        href="https://drive.google.com/file/d/1K5w2q0Z_WrF_0pV2cwxCJY7Qp74ZbQAa/view"
-        variant="outline"
-        _hover={{
-          bgColor: "navy",
-          color: "teal.100",
-          borderColor: "teal.100",
-          transform: "scale(1.10)",
-        }}
-        border="1px solid"
-        padding="20px 30px"
-        fontSize="sm"
-        color="teal200"
-        borderColor="teal200"
-        fontFamily="body"
-      >
-        Resume
-      </Button>
+      <NavLinks display={{ base: "none", md: "flex" }} navLinks={navLinks} />
+      <HamburgerMenue
+        onClose={onClose}
+        onOpen={onOpen}
+        btnRef={btnRef}
+        isOpen={isOpen}
+        content={
+          <NavLinks
+            onClose={onClose}
+            marginTop="60px"
+            color="slate300"
+            justifyContent="center"
+            alignItems="center"
+            navLinks={navLinks}
+            flexDirection="column"
+          />
+        }
+      />
     </Box>
   );
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "@chakra-ui/react";
+import { Box, Container } from "@chakra-ui/react";
 
 import NavBar from "../Navbar/NavBar";
 
@@ -16,8 +16,8 @@ const Layout = ({ children }) => {
       <Box
         as="main"
         marginX="auto"
-        paddingY="150px"
-        paddingX="0px"
+        paddingY={{ base: "50px", md: "150px" }}
+        paddingX="10px"
         style={{ margin: "auto" }}
         width="100%"
         maxWidth="1500px"

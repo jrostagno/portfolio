@@ -18,7 +18,14 @@ const Experience = () => {
   ];
 
   return (
-    <Box id="experience" marginTop={20} paddingY={40} marginBottom={0}>
+    <Box
+      id="experience"
+      height="100vh"
+      marginTop={20}
+      paddingTop={40}
+      paddingBottom={20}
+      marginBottom={0}
+    >
       <SectionDivider query="02." section="02. Dev Experience & more.." />
       <Box
         data-aos="fade-up"
@@ -32,6 +39,8 @@ const Experience = () => {
           <Stack spacing={0} borderLeft="1px solid" borderColor="gray.600">
             {experience.map((company) => (
               <Button
+                paddingX={{ base: "10px", sm: "20px", md: "30px" }}
+                paddingY={{ base: "10px", sm: "20px", md: "30px" }}
                 sx={stylesButtonExperience}
                 onClick={company.click}
                 key={company.name}
@@ -40,7 +49,7 @@ const Experience = () => {
               </Button>
             ))}
           </Stack>
-          <Box>
+          <Box padding="0px">
             {isSelected === 20 && (
               <ExperienceDescription
                 company="MASLOW"
@@ -55,7 +64,7 @@ const Experience = () => {
             )}
             {isSelected === 30 && (
               <ExperienceDescription
-                company="Foodarity APP -[Academic project]"
+                company="Foodarity APP"
                 date="jul 21- jan 22"
                 description="I worked on the creation of a MarketPlace aimed at solving social problems together with a team using agile methodologies (SCRUM), with a one-week sprint and presentations to a product owner belonging to the staff."
                 stack="Stack : JavaScrip, Node, PostgresSQL,Express, React, Redux, CSS Modules y Material UI."
@@ -63,7 +72,7 @@ const Experience = () => {
             )}
             {isSelected === 40 && (
               <ExperienceDescription
-                company="Emerson automation Solutions"
+                company="Emerson"
                 date="may 19- sep 21"
                 description=" Inside Sales associate - Oil and Gas Industry
                 -Responsibilities: make project quotes, monitor sales

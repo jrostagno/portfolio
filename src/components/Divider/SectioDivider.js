@@ -4,7 +4,11 @@ import React from "react";
 const SectionDivider = ({ query, section }) => {
   return (
     <Flex alignItems="center" gap="6">
-      <Heading fontSize="2rem" color="slate100" fontWeight="600">
+      <Heading
+        fontSize={{ base: "1.5rem", md: "2rem" }}
+        color="slate100"
+        fontWeight="600"
+      >
         <Highlight
           query={query}
           styles={{ px: "2", py: "1", rounded: "full", bg: "teal.200" }}
@@ -12,7 +16,11 @@ const SectionDivider = ({ query, section }) => {
           {section}
         </Highlight>
       </Heading>
-      <Divider width="250px" borderColor={"teal.200"} />
+      <Divider
+        display={{ base: "none", sm: "block" }}
+        width="250px"
+        borderColor={"teal.200"}
+      />
     </Flex>
   );
 };

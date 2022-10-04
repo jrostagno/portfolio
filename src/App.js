@@ -10,21 +10,23 @@ import { useEffect, useState } from "react";
 import Loader from "./components/Loaders/Loader";
 
 function App() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
-  window.addEventListener("load", function () {
-    setLoading(false);
-  });
-
-  // useEffect(() => {
-  //   setLoading(false);
-  // }, []);
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 6000);
+  }, []);
 
   if (loading) return <Loader />;
 
   return (
     <Layout>
-      <Container paddingX="130px" maxWidth="1250px">
+      <Container
+        paddingX={{ base: "10px", sm: "30px", md: "130px" }}
+        maxWidth="1250px"
+      >
         <Hero />
         <About />
         <Experience />

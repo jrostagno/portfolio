@@ -9,7 +9,7 @@ const IconsLinks = () => {
       position="fixed"
       bottom="0"
       left="40px"
-      display="flex"
+      display={{ base: "none", md: "flex" }}
       flexDirection="column"
       alignItems="center"
       gap={3}
