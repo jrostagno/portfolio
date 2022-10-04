@@ -30,7 +30,7 @@ const About = () => {
           <Text
             as="p"
             paddingBottom={{ base: "1", sm: "5" }}
-            fontSize={{ base: "0.7rem", sm: "xl" }}
+            fontSize={{ base: "md", sm: "lg" }}
             lineHeight={{ base: "inherit", sm: "short" }}
             sx={stylesParagraphAbout}
           >
@@ -46,7 +46,7 @@ const About = () => {
             learning application development, which I found, I enjoy quite a
             bit.
           </Text>
-          <Text sx={stylesParagraphAbout}>
+          <Text fontSize={{ base: "md", sm: "lg" }} sx={stylesParagraphAbout}>
             In order to have more comprehensive training, I carried out a{" "}
             <span
               style={{ color: "#81E6D9", opacity: "1", marginRight: "4px" }}
@@ -56,14 +56,14 @@ const About = () => {
             Bootcamp of more than 800 hours of code, in which I carried out
             several projects. <br />
           </Text>
-          <Text sx={stylesParagraphAbout}>
+          <Text fontSize={{ base: "md", sm: "lg" }} sx={stylesParagraphAbout}>
             I am currently making applications on my own to continue practicing.
             I have a marked preference towards the Frontend, I like UI
             development and improving user experience, and I would like to
             continue delving into this area and learn technologies (React
             Native) to be able to develop for mobile devices.
           </Text>
-          <Text sx={stylesParagraphAbout}>
+          <Text fontSize={{ base: "md", sm: "lg" }} sx={stylesParagraphAbout}>
             These are the technologies with which I have been working:
           </Text>
         </Box>
