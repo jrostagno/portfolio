@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Accordion,
   AccordionButton,
@@ -41,7 +41,7 @@ const Card = ({ img, title, subtitle, stack, description, github, url }) => {
                   transitionDelay: "250ms",
                   bgColor: "navy",
                   filter: "none",
-                  bgImage: `url(${img})`,
+                  //bgImage: `url(${img})`,
                   bgSize: { base: "45% auto" },
                   bgPosition: "center center",
                   bgRepeat: "no-repeat",
@@ -85,9 +85,12 @@ const Card = ({ img, title, subtitle, stack, description, github, url }) => {
                   <Text
                     textAlign="left"
                     fontSize="xl"
-                    _groupHover={{
-                      visibility: "hidden",
+                    _hover={{
+                      color: "teal200",
                     }}
+                    // _groupHover={{
+                    //   visibility: "hidden",
+                    // }}
                     fontWeight="600"
                     color="slate100"
                     as="h3"
@@ -101,9 +104,9 @@ const Card = ({ img, title, subtitle, stack, description, github, url }) => {
                     letterSpacing="wide"
                     lineHeight={{ base: "4", sm: "6" }}
                     color="slate300"
-                    _groupHover={{
-                      visibility: "hidden",
-                    }}
+                    // _groupHover={{
+                    //   visibility: "hidden",
+                    // }}
                     opacity="0.5"
                     as="p"
                   >

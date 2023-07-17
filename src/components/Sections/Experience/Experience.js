@@ -8,9 +8,10 @@ import SectionDivider from "../../Divider/SectioDivider";
 
 const Experience = () => {
   AOS.init();
-  const [isSelected, setIsSelected] = useState(20);
+  const [isSelected, setIsSelected] = useState(10);
 
   const experience = [
+    { name: "Sinapsis", click: () => setIsSelected(10) },
     { name: "Maslow", click: () => setIsSelected(20) },
     { name: "Foodarity", click: () => setIsSelected(30) },
     { name: "Emerson", click: () => setIsSelected(40) },
@@ -50,10 +51,18 @@ const Experience = () => {
             ))}
           </Stack>
           <Box padding="0px">
+            {isSelected === 10 && (
+              <ExperienceDescription
+                company="Sinapsis"
+                date="oct 22- present"
+                description="Sinapsis is a software factory dedicated to creating serverless applications. Position: Frontend developer"
+                stack="Skills: TypeScript, React.js, Jira, Redux Toolkit, React Context, Material UI."
+              />
+            )}
             {isSelected === 20 && (
               <ExperienceDescription
                 company="MASLOW"
-                date="jan 22- jul 22"
+                date="feb 22- jul 22"
                 description="Frontend Developer - Maslow is a start-up dedicated to
                 offering company services, focused on their employees
                 compensation systems. MVP creation, and development of
@@ -65,7 +74,7 @@ const Experience = () => {
             {isSelected === 30 && (
               <ExperienceDescription
                 company="Foodarity APP"
-                date="jul 21- jan 22"
+                date="jul 21- feb 22"
                 description="I worked on the creation of a MarketPlace aimed at solving social problems together with a team using agile methodologies (SCRUM), with a one-week sprint and presentations to a product owner belonging to the staff."
                 stack="Stack : JavaScrip, Node, PostgresSQL,Express, React, Redux, CSS Modules y Material UI."
               />
@@ -85,7 +94,7 @@ const Experience = () => {
             {isSelected === 50 && (
               <ExperienceDescription
                 company=" Netzsch"
-                date="may 16- sep 19"
+                date="may 14- sep 19"
                 description="Applications and Sales engineering - Oil and Gas Industry
                 -Responsibilities: Serve client portfolio by visiting
                 customers, engineering the equipment to be quoted, achieve
