@@ -19,23 +19,21 @@ function App() {
     }, 6000);
   }, []);
 
-  // if (loading) return <Loader />;
+  if (loading) return <Loader />;
 
   return (
-    <h1>Error</h1>
-
-    // <Layout>
-    //   <Container
-    //     paddingX={{ base: "10px", sm: "30px", md: "130px" }}
-    //     maxWidth="1250px"
-    //   >
-    //     <Hero />
-    //     <About />
-    //     <Experience />
-    //     <Work />
-    //     <Contact />
-    //   </Container>
-    // </Layout>
+    <Layout>
+      <Container
+        paddingX={{ base: "10px", sm: "30px", md: "130px" }}
+        maxWidth="1250px"
+      >
+        <Hero />
+        <About />
+        <Experience />
+        <Work />
+        <Contact />
+      </Container>
+    </Layout>
   );
 }
 
