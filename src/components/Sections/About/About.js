@@ -34,35 +34,26 @@ const About = () => {
             lineHeight={{ base: "inherit", sm: "short" }}
             sx={stylesParagraphAbout}
           >
-            Hello there! I am a curious{" "}
-            <span style={{ color: "#81E6D9", opacity: "1" }}>
-              Chemical Engineer
-            </span>{" "}
-            who started studying programming during quarantine time and now it
-            fascinates me.
-            <br /> The technology industry has always caught my attention, its
-            flexible ways of working, the bunch of opportunities they have, and
-            the great capacity to impact change have sparked my interest in
-            learning application development, which I found, I enjoy quite a
-            bit.
+            Hello there! I'm a front-end developer specializing in
+            Typescript/Node/React, and a chemical engineer who graduated from
+            the National University of Litoral in Argentina. I love the
+            technology industry and its challenges, and enjoy the process of
+            solving problems. I'm dedicated to continuous improvement and
+            staying up-to-date with the latest technologies and tools. I'm
+            studying mobile development with React Native, taking courses, and
+            developing apps on my own. I'm passionate about collaborating on
+            multidisciplinary teams, where I can contribute my technical
+            knowledge. I'm constantly looking for opportunities to grow
+            professionally and contribute to innovative projects.
           </Text>
-          <Text fontSize={{ base: "md", sm: "lg" }} sx={stylesParagraphAbout}>
-            In order to have more comprehensive training, I carried out a{" "}
-            <span
-              style={{ color: "#81E6D9", opacity: "1", marginRight: "4px" }}
-            >
-              Full Stack Developer
-            </span>
-            Bootcamp of more than 800 hours of code, in which I carried out
-            several projects. <br />
-          </Text>
-          <Text fontSize={{ base: "md", sm: "lg" }} sx={stylesParagraphAbout}>
-            I am currently making applications on my own to continue practicing.
-            I have a marked preference towards the Frontend, I like UI
-            development and improving user experience, and I would like to
-            continue delving into this area and learn technologies (React
-            Native) to be able to develop for mobile devices.
-          </Text>
+          <Text
+            fontSize={{ base: "md", sm: "lg" }}
+            sx={stylesParagraphAbout}
+          ></Text>
+          <Text
+            fontSize={{ base: "md", sm: "lg" }}
+            sx={stylesParagraphAbout}
+          ></Text>
           <Text fontSize={{ base: "md", sm: "lg" }} sx={stylesParagraphAbout}>
             These are the technologies with which I have been working:
           </Text>

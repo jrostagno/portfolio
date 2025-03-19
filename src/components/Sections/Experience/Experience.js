@@ -8,7 +8,7 @@ import SectionDivider from "../../Divider/SectioDivider";
 
 const Experience = () => {
   AOS.init();
-  const [isSelected, setIsSelected] = useState(10);
+  const [isSelected, setIsSelected] = useState(5);
 
   const experience = [
     { name: "Clau", click: () => setIsSelected(5) },

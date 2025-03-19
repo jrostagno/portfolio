@@ -54,9 +54,9 @@ const Hero = () => {
         lineHeight={{ base: "7", sm: "8" }}
         opacity="0.6"
       >
-        I am a Full stack developer with a preference for Frontend, I like
-        creating nice UI. <br />I develop my app With React and love using
-        libraries such as Tailwinds and Chakra UI.
+        I'm an engineer who loves the technology industry and its challenges,
+        and enjoy the process of solving problems. I love building accessible,
+        interactive, and dynamic pixel-perfect digital experiences for the web.
       </Text>
     </Stack>
   );
