@@ -11,6 +11,7 @@ const Experience = () => {
   const [isSelected, setIsSelected] = useState(10);
 
   const experience = [
+    { name: "Clau", click: () => setIsSelected(5) },
     { name: "Sinapsis", click: () => setIsSelected(10) },
     { name: "Maslow", click: () => setIsSelected(20) },
     { name: "Foodarity", click: () => setIsSelected(30) },
@@ -51,10 +52,19 @@ const Experience = () => {
             ))}
           </Stack>
           <Box padding="0px">
+            {isSelected === 5 && (
+              <ExperienceDescription
+                company="Clau"
+                date="aug 24- present"
+                description="Clau is a real estate portal (marketplace), and has an exclusive service for real estate brokers, where their advisors can manage the published properties and their clients.
+https://www.clau.com/"
+                stack="Next 14/15, Next Auth, React, TypeScript, SWR, Tailwinds, Shadcn/ui, Vercel, Hubspot, Typesense, Segment, Mapbox"
+              />
+            )}
             {isSelected === 10 && (
               <ExperienceDescription
                 company="Sinapsis"
-                date="oct 22- present"
+                date="oct 22- aug 24"
                 description="Sinapsis is a software factory dedicated to creating serverless applications. Position: Frontend developer"
                 stack="Skills: TypeScript, React.js, Jira, Redux Toolkit, React Context, Material UI."
               />
