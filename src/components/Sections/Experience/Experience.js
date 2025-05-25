@@ -57,8 +57,9 @@ const Experience = () => {
               <ExperienceDescription
                 company="Clau"
                 date="aug 24-may 25"
-                description="Clau is a real estate portal (marketplace), and has an exclusive service for real estate brokers, where their advisors can manage the published properties and their clients.
-https://www.clau.com/"
+                description="Clau is a real estate marketplace that also offers an exclusive service for
+brokers, allowing them to manage published properties, as well as their agents
+and clients."
                 stack="Next 14/15, Next Auth, React, TypeScript, SWR, Tailwinds, Shadcn/ui, Vercel, Hubspot, Typesense, Segment, Mapbox"
               />
             )}
@@ -79,18 +80,21 @@ components, Geolocation, Stripe, Material UI"
               <ExperienceDescription
                 company="Sinapsis"
                 date="sep 22- aug 24"
-                description="Sinapsis is a software factory dedicated to creating serverless applications. Position: Frontend developer"
-                stack="Skills: TypeScript, React.js, Jira, Redux Toolkit, React Context, Material UI."
+                description="Sinapsis is a software factory specialized in serverless applications, primarily
+focused on building MVPs. I collaborated on various projects, including
+Barmetrix (a measurement and management system for restaurants) and
+IdealCrow (a CRM platform)."
+                stack="TypeScript, React, TanStack Query, Zustand, GraphQL, Material UI"
               />
             )}
             {isSelected === 20 && (
               <ExperienceDescription
-                company="MASLOW"
+                company="Maslow"
                 date="feb 22- jul 22"
-                description="Frontend Developer - Maslow is a start-up dedicated to
-                offering company services, focused on their employees
-                compensation systems. MVP creation, and development of
-                different features for Maslow web application."
+                description="Maslow (a startup focused on employee compensation systems)
+Contributed to the creation of the MVP and developed multiple features for
+Maslow’s web application, utilizing JavaScript, React, Next.js, and TailwindCSS
+to deliver scalable and user-friendly solutions."
                 stack="Skills: Storybooks · Trello · Kanban · Next.js · JavaScript
                 · React.js · Tailwind CSS"
               />
