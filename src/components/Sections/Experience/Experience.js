@@ -12,11 +12,12 @@ const Experience = () => {
 
   const experience = [
     { name: "Clau", click: () => setIsSelected(5) },
+    { name: "Sharecare", click: () => setIsSelected(4) },
     { name: "Sinapsis", click: () => setIsSelected(10) },
     { name: "Maslow", click: () => setIsSelected(20) },
     { name: "Foodarity", click: () => setIsSelected(30) },
-    { name: "Emerson", click: () => setIsSelected(40) },
-    { name: "Netzsch", click: () => setIsSelected(50) },
+    // { name: "Emerson", click: () => setIsSelected(40) },
+    // { name: "Netzsch", click: () => setIsSelected(50) },
   ];
 
   return (
@@ -55,16 +56,29 @@ const Experience = () => {
             {isSelected === 5 && (
               <ExperienceDescription
                 company="Clau"
-                date="aug 24- present"
+                date="aug 24-may 25"
                 description="Clau is a real estate portal (marketplace), and has an exclusive service for real estate brokers, where their advisors can manage the published properties and their clients.
 https://www.clau.com/"
                 stack="Next 14/15, Next Auth, React, TypeScript, SWR, Tailwinds, Shadcn/ui, Vercel, Hubspot, Typesense, Segment, Mapbox"
               />
             )}
+
+            {isSelected === 4 && (
+              <ExperienceDescription
+                company="Sharecare"
+                date="oct 24- ago 24"
+                description="Wecare is a mobile and web application used by employees of a U.S.
+company, which rewards users with points for completing healthy activities. It
+also functions as a social network: users can add people to their circle, share
+activities, post updates, comment, like, and chat."
+                stack="TypeScript, React, Redux Toolkit, Context API, Mapbox, Styled-
+components, Geolocation, Stripe, Material UI"
+              />
+            )}
             {isSelected === 10 && (
               <ExperienceDescription
                 company="Sinapsis"
-                date="oct 22- aug 24"
+                date="sep 22- aug 24"
                 description="Sinapsis is a software factory dedicated to creating serverless applications. Position: Frontend developer"
                 stack="Skills: TypeScript, React.js, Jira, Redux Toolkit, React Context, Material UI."
               />
@@ -89,7 +103,7 @@ https://www.clau.com/"
                 stack="Stack : JavaScrip, Node, PostgresSQL,Express, React, Redux, CSS Modules y Material UI."
               />
             )}
-            {isSelected === 40 && (
+            {/* {isSelected === 40 && (
               <ExperienceDescription
                 company="Emerson"
                 date="may 19- sep 21"
@@ -110,7 +124,7 @@ https://www.clau.com/"
                 customers, engineering the equipment to be quoted, achieve
                 the established sales objectives."
               />
-            )}
+            )} */}
           </Box>
         </Flex>
       </Box>
