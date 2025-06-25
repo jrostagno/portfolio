@@ -42,7 +42,7 @@ const NavLinks = ({ navLinks, onClose, ...props }) => {
         <ButtonPrimary
           as="a"
           target="_blank"
-          href="https://drive.google.com/file/d/1LOyS9KPz7Zjoqhrrlw0FAgPARKX6bz2p/view?usp=drive_link"
+          href="https://drive.google.com/file/d/1H4Tp64G34OBtdG6kef10kVqcJMEk7kH1/view?usp=drive_link"
         >
           Resume
         </ButtonPrimary>
