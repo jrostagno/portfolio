@@ -56,7 +56,7 @@ const Experience = () => {
             {isSelected === 5 && (
               <ExperienceDescription
                 company="Clau"
-                date="aug 24-may 25"
+                date="aug 24-apr 25"
                 description="Clau is a real estate marketplace that also offers an exclusive service for
 brokers, allowing them to manage published properties, as well as their agents
 and clients."
